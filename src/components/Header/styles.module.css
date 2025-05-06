@@ -1,0 +1,89 @@
+.wrapper {
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 75rem;
+  width: 100%;
+  padding: 1.25rem;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.nav a,
+.dropdownMenuContent a {
+  display: block;
+  color: var(--blue-400);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+.nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  transition: 0.3s;
+  margin-top: 4px;
+  background-color: currentColor;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Configs menu hamburguer mobile */
+
+.hamburguerMenu {
+  all: unset;
+  border-radius: 4px;
+  color: var(--blue-400);
+  cursor: pointer;
+  transition: 0.3s;
+  padding-bottom: 8px;
+  display: none;
+}
+.hamburguerMenu[data-state="open"] {
+  color: var(--blue-300);
+}
+.hamburguerMenu:hover {
+  color: var(--blue-300);
+}
+
+.dropdownMenuContent {
+  width: 220px;
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+}
+.dropdownMenuContent div a {
+  outline: none;
+  padding-bottom: 0.75rem;
+}
+.dropdownMenuContent div:last-child a {
+  padding-bottom: 0;
+}
+.dropdownMenuContent div a:hover {
+  color: var(--blue-300);
+}
+
+@media (max-width: 600px) {
+  .nav > a {
+    display: none;
+  }
+  .hamburguerMenu {
+    display: block;
+  }
+}

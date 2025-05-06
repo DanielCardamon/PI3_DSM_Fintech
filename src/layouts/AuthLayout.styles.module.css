@@ -1,0 +1,13 @@
+.authContainer {
+  display: flex;
+  align-items: start;
+  min-height: 100vh;
+}
+
+@media (max-width: 800px) {
+  .authContainer {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+  }
+}
